@@ -119,9 +119,7 @@ class UserController {
 #### Test code
 ```ts
 import config from './config'
-config.set('db', {
-  connection: 'sqlite'
-})
+config.set('db.connection', 'sqlite')
 
 // now run tests and connection will be sqlite over pg
 ```

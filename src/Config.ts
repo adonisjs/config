@@ -1,3 +1,7 @@
+/**
+ * @module @poppinss/request
+ */
+
 /*
  * @poppinss/config
  *
