@@ -1,4 +1,4 @@
-[@poppinss/config](../README.md) > [@poppinss/request](../modules/_poppinss_request.md) > [Config](../classes/_poppinss_request.config.md)
+[@poppinss/config](../README.md) > [@poppinss/config](../modules/_poppinss_config.md) > [Config](../classes/_poppinss_config.config.md)
 
 # Class: Config
 
@@ -37,18 +37,18 @@ Config.get('app.appKey')
 
 ### Constructors
 
-* [constructor](_poppinss_request.config.md#constructor)
+* [constructor](_poppinss_config.config.md#constructor)
 
 ### Properties
 
-* [_config](_poppinss_request.config.md#_config)
+* [_config](_poppinss_config.config.md#_config)
 
 ### Methods
 
-* [defaults](_poppinss_request.config.md#defaults)
-* [get](_poppinss_request.config.md#get)
-* [merge](_poppinss_request.config.md#merge)
-* [set](_poppinss_request.config.md#set)
+* [defaults](_poppinss_config.config.md#defaults)
+* [get](_poppinss_config.config.md#get)
+* [merge](_poppinss_config.config.md#merge)
+* [set](_poppinss_config.config.md#set)
 
 ---
 
@@ -58,7 +58,7 @@ Config.get('app.appKey')
 
 ###  constructor
 
-⊕ **new Config**(_config?: *`object`*): [Config](_poppinss_request.config.md)
+⊕ **new Config**(_config?: *`object`*): [Config](_poppinss_config.config.md)
 
 **Parameters:**
 
@@ -66,7 +66,7 @@ Config.get('app.appKey')
 | ------ | ------ | ------ |
 | `Default value` _config | `object` |  {} |
 
-**Returns:** [Config](_poppinss_request.config.md)
+**Returns:** [Config](_poppinss_config.config.md)
 
 ___
 

@@ -5,7 +5,7 @@
 
 ### External modules
 
-* [@poppinss/request](modules/_poppinss_request.md)
+* [@poppinss/config](modules/_poppinss_config.md)
 
 ---
 
