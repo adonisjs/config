@@ -39,10 +39,6 @@ Config.get('app.appKey')
 
 * [constructor](_poppinss_config.config.md#constructor)
 
-### Properties
-
-* [_config](_poppinss_config.config.md#_config)
-
 ### Methods
 
 * [defaults](_poppinss_config.config.md#defaults)
@@ -67,18 +63,6 @@ Config.get('app.appKey')
 | `Default value` _config | `object` |  {} |
 
 **Returns:** [Config](_poppinss_config.config.md)
-
-___
-
-## Properties
-
-<a id="_config"></a>
-
-### `<Private>` _config
-
-**● _config**: *`object`*
-
-#### Type declaration
 
 ___
 
