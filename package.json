@@ -72,5 +72,17 @@
   "dependencies": {
     "@types/lodash": "^4.14.126",
     "lodash": "^4.17.11"
-  }
+  },
+  "directories": {
+    "doc": "docs",
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/poppinss/config.git"
+  },
+  "bugs": {
+    "url": "https://github.com/poppinss/config/issues"
+  },
+  "homepage": "https://github.com/poppinss/config#readme"
 }
