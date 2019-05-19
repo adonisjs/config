@@ -7,10 +7,11 @@
 * file that was distributed with this source code.
 */
 
+/// <reference path="./src/contracts.ts" />
+
 declare module '@ioc:Adonis/Src/Config' {
-  /// <reference path="./src/contracts.ts" />
   import { ConfigContract as BaseContract } from '@poppinss/config/contracts'
-  interface ConfigContract extends BaseContract {}
+  export interface ConfigContract extends BaseContract {}
 
   const Config: ConfigContract
   export default Config

@@ -4,10 +4,10 @@
   "description": "Config management for Adonis framework",
   "main": "build/index.js",
   "files": [
+    "build/adonis-typings.d.ts",
     "build/src",
     "build/index.d.ts",
-    "build/index.js",
-    "adonis-typings.d.ts"
+    "build/index.js"
   ],
   "scripts": {
     "mrm": "mrm --preset=@adonisjs/mrm-preset",
