@@ -9,7 +9,7 @@
 
 /// <reference path="../src/contracts.ts" />
 
-declare module '@ioc:Config' {
+declare module '@ioc:Adonis/Src/Config' {
   import { ConfigContract as BaseContract } from '@poppinss/config/contracts'
   export interface ConfigContract extends BaseContract {}
 
