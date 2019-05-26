@@ -11,10 +11,8 @@
 * file that was distributed with this source code.
 */
 
-/// <reference path="./contracts.ts" />
-
 import { get, set, mergeWith } from 'lodash'
-import { ConfigContract } from '@poppinss/config/contracts'
+import { ConfigContract } from './contracts'
 
 /**
  * Config module eases the process of using configuration inside your AdonisJs

@@ -7,11 +7,9 @@
 * file that was distributed with this source code.
 */
 
-declare module '@poppinss/config/contracts' {
-  interface ConfigContract {
-    get (key: string, defaultValue?: any): any
-    merge (key: string, defaultValues: object, customizer?: Function): any
-    set (key: string, value: any): void
-    defaults (key: string, value: any): void
-  }
+export interface ConfigContract {
+  get (key: string, defaultValue?: any): any
+  merge (key: string, defaultValues: object, customizer?: Function): any
+  set (key: string, value: any): void
+  defaults (key: string, value: any): void
 }

@@ -7,7 +7,5 @@
 * file that was distributed with this source code.
 */
 
-/// <reference path="./src/contracts.ts" />
-
 export { Config } from './src/Config'
-export { ConfigContract } from '@poppinss/config/contracts'
+export { ConfigContract } from './src/contracts'
