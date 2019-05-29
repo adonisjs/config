@@ -8,5 +8,9 @@
 
 * [Config](../classes/_poppinss_config.config.md)
 
+### Interfaces
+
+* [ConfigContract](../interfaces/_poppinss_config.configcontract.md)
+
 ---
 

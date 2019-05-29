@@ -31,7 +31,7 @@ Config.get('app.appKey')
 
 ## Implements
 
-* [ConfigContract](../interfaces/_contracts_.configcontract.md)
+* [ConfigContract](../interfaces/_poppinss_config.configcontract.md)
 
 ## Index
 

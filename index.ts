@@ -1,4 +1,8 @@
-/*
+/**
+ * @module @poppinss/config
+ */
+
+ /*
 * @poppinss/config
 *
 * (c) Harminder Virk <virk@adonisjs.com>

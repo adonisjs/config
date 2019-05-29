@@ -1,4 +1,4 @@
-[@poppinss/config](../README.md) > ["contracts"](../modules/_contracts_.md) > [ConfigContract](../interfaces/_contracts_.configcontract.md)
+[@poppinss/config](../README.md) > [@poppinss/config](../modules/_poppinss_config.md) > [ConfigContract](../interfaces/_poppinss_config.configcontract.md)
 
 # Interface: ConfigContract
 
@@ -14,10 +14,10 @@
 
 ### Methods
 
-* [defaults](_contracts_.configcontract.md#defaults)
-* [get](_contracts_.configcontract.md#get)
-* [merge](_contracts_.configcontract.md#merge)
-* [set](_contracts_.configcontract.md#set)
+* [defaults](_poppinss_config.configcontract.md#defaults)
+* [get](_poppinss_config.configcontract.md#get)
+* [merge](_poppinss_config.configcontract.md#merge)
+* [set](_poppinss_config.configcontract.md#set)
 
 ---
 
