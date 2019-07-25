@@ -1,10 +1,12 @@
-[@poppinss/config](../README.md) > [@poppinss/config](../modules/_poppinss_config.md) > [ConfigContract](../interfaces/_poppinss_config.configcontract.md)
+> **[@poppinss/config](../README.md)**
+
+[Globals](../README.md) / [@poppinss/config](../modules/_poppinss_config.md) / [ConfigContract](_poppinss_config.configcontract.md) /
 
 # Interface: ConfigContract
 
 ## Hierarchy
 
-**ConfigContract**
+* **ConfigContract**
 
 ## Implemented by
 
@@ -19,73 +21,63 @@
 * [merge](_poppinss_config.configcontract.md#merge)
 * [set](_poppinss_config.configcontract.md#set)
 
----
-
 ## Methods
-
-<a id="defaults"></a>
 
 ###  defaults
 
-▸ **defaults**(key: *`string`*, value: *`any`*): `void`
+▸ **defaults**(`key`: string, `value`: any): *void*
 
 **Parameters:**
 
-| Name | Type |
-| ------ | ------ |
-| key | `string` |
-| value | `any` |
+Name | Type |
+------ | ------ |
+`key` | string |
+`value` | any |
 
-**Returns:** `void`
+**Returns:** *void*
 
 ___
-<a id="get"></a>
 
 ###  get
 
-▸ **get**(key: *`string`*, defaultValue?: *`any`*): `any`
+▸ **get**(`key`: string, `defaultValue?`: any): *any*
 
 **Parameters:**
 
-| Name | Type |
-| ------ | ------ |
-| key | `string` |
-| `Optional` defaultValue | `any` |
+Name | Type |
+------ | ------ |
+`key` | string |
+`defaultValue?` | any |
 
-**Returns:** `any`
+**Returns:** *any*
 
 ___
-<a id="merge"></a>
 
 ###  merge
 
-▸ **merge**(key: *`string`*, defaultValues: *`object`*, customizer?: *`Function`*): `any`
+▸ **merge**(`key`: string, `defaultValues`: object, `customizer?`: `Function`): *any*
 
 **Parameters:**
 
-| Name | Type |
-| ------ | ------ |
-| key | `string` |
-| defaultValues | `object` |
-| `Optional` customizer | `Function` |
+Name | Type |
+------ | ------ |
+`key` | string |
+`defaultValues` | object |
+`customizer?` | `Function` |
 
-**Returns:** `any`
+**Returns:** *any*
 
 ___
-<a id="set"></a>
 
 ###  set
 
-▸ **set**(key: *`string`*, value: *`any`*): `void`
+▸ **set**(`key`: string, `value`: any): *void*
 
 **Parameters:**
 
-| Name | Type |
-| ------ | ------ |
-| key | `string` |
-| value | `any` |
+Name | Type |
+------ | ------ |
+`key` | string |
+`value` | any |
 
-**Returns:** `void`
-
-___
-
+**Returns:** *void*

@@ -1,15 +1,18 @@
-[@poppinss/config](../README.md) > [@poppinss/config](../modules/_poppinss_config.md) > [Config](../classes/_poppinss_config.config.md)
+> **[@poppinss/config](../README.md)**
+
+[Globals](../README.md) / [@poppinss/config](../modules/_poppinss_config.md) / [Config](_poppinss_config.config.md) /
 
 # Class: Config
 
-Config module eases the process of using configuration inside your AdonisJs applications.
+Config module eases the process of using configuration inside your AdonisJs
+applications.
 
-The config files are stored inside a seperate directory, which are loaded and cached on application boot. Later you can access the values using the `dot` syntax.
+The config files are stored inside a seperate directory, which are loaded and cached
+on application boot. Later you can access the values using the `dot` syntax.
 
-Access values
--------------
+## Access values
 
-1.  **Given the config file is stored as `config/app.js` with following content**
+1. **Given the config file is stored as `config/app.js` with following content**
 
 ```js
 module.exports = {
@@ -17,17 +20,18 @@ module.exports = {
 }
 ```
 
-2.  **You access the appKey as follows**
+2. **You access the appKey as follows**
 
 ```js
 Config.get('app.appKey')
 ```
 
-**NOTE:** The `get` method doesn't raise runtime exceptions when top level objects are missing.
+**NOTE:**
+The `get` method doesn't raise runtime exceptions when top level objects are missing.
 
 ## Hierarchy
 
-**Config**
+* **Config**
 
 ## Implements
 
@@ -46,83 +50,85 @@ Config.get('app.appKey')
 * [merge](_poppinss_config.config.md#merge)
 * [set](_poppinss_config.config.md#set)
 
----
-
 ## Constructors
-
-<a id="constructor"></a>
 
 ###  constructor
 
-⊕ **new Config**(_config?: *`object`*): [Config](_poppinss_config.config.md)
+\+ **new Config**(`_config`: object): *[Config](_poppinss_config.config.md)*
 
 **Parameters:**
 
-| Name | Type | Default value |
-| ------ | ------ | ------ |
-| `Default value` _config | `object` |  {} |
+Name | Type | Default |
+------ | ------ | ------ |
+`_config` | object |  {} |
 
-**Returns:** [Config](_poppinss_config.config.md)
-
-___
+**Returns:** *[Config](_poppinss_config.config.md)*
 
 ## Methods
 
-<a id="defaults"></a>
-
 ###  defaults
 
-▸ **defaults**(key: *`string`*, value: *`any`*): `void`
+▸ **defaults**(`key`: string, `value`: any): *void*
 
-Defaults allows providers to define the default config for a module, which is merged with the user config
+*Implementation of [ConfigContract](../interfaces/_poppinss_config.configcontract.md)*
+
+Defaults allows providers to define the default config for a
+module, which is merged with the user config
 
 **Parameters:**
 
-| Name | Type |
-| ------ | ------ |
-| key | `string` |
-| value | `any` |
+Name | Type |
+------ | ------ |
+`key` | string |
+`value` | any |
 
-**Returns:** `void`
+**Returns:** *void*
 
 ___
-<a id="get"></a>
 
 ###  get
 
-▸ **get**(key: *`string`*, defaultValue?: *`any`*): `any`
+▸ **get**(`key`: string, `defaultValue?`: any): *any*
 
-Read value from the pre-loaded config. Make use of the `dot notation` syntax to read nested values.
+*Implementation of [ConfigContract](../interfaces/_poppinss_config.configcontract.md)*
+
+Read value from the pre-loaded config. Make use of the `dot notation`
+syntax to read nested values.
 
 The `defaultValue` is returned when original value is `undefined`.
 
-*__example__*:
- ```js
+**`example`** 
+```js
 Config.get('database.mysql')
 ```
 
 **Parameters:**
 
-| Name | Type |
-| ------ | ------ |
-| key | `string` |
-| `Optional` defaultValue | `any` |
+Name | Type |
+------ | ------ |
+`key` | string |
+`defaultValue?` | any |
 
-**Returns:** `any`
+**Returns:** *any*
 
 ___
-<a id="merge"></a>
 
 ###  merge
 
-▸ **merge**(key: *`string`*, defaultValues: *`object`*, customizer?: *`Function`*): `any`
+▸ **merge**(`key`: string, `defaultValues`: object, `customizer?`: `Function`): *any*
 
-Fetch and merge an object to the existing config. This method is useful when you are fetching an object from the config and want to merge it with some default values.
+*Implementation of [ConfigContract](../interfaces/_poppinss_config.configcontract.md)*
 
-An optional customizer can be passed to customize the merge operation. The function is directly passed to [lodash.mergeWith](https://lodash.com/docs/4.17.10#mergeWith) method.
+Fetch and merge an object to the existing config. This method is useful
+when you are fetching an object from the config and want to merge
+it with some default values.
 
-*__example__*:
- ```js
+An optional customizer can be passed to customize the merge operation.
+The function is directly passed to [lodash.mergeWith](https://lodash.com/docs/4.17.10#mergeWith)
+method.
+
+**`example`** 
+```js
 // Config inside the file will be merged with the given object
 
 Config.merge('database.mysql', {
@@ -133,36 +139,34 @@ Config.merge('database.mysql', {
 
 **Parameters:**
 
-| Name | Type |
-| ------ | ------ |
-| key | `string` |
-| defaultValues | `object` |
-| `Optional` customizer | `Function` |
+Name | Type |
+------ | ------ |
+`key` | string |
+`defaultValues` | object |
+`customizer?` | `Function` |
 
-**Returns:** `any`
+**Returns:** *any*
 
 ___
-<a id="set"></a>
 
 ###  set
 
-▸ **set**(key: *`string`*, value: *`any`*): `void`
+▸ **set**(`key`: string, `value`: any): *void*
+
+*Implementation of [ConfigContract](../interfaces/_poppinss_config.configcontract.md)*
 
 Update in memory value of the pre-loaded config
 
-*__example__*:
- ```js
+**`example`** 
+```js
 Config.set('database.host', '127.0.0.1')
 ```
 
 **Parameters:**
 
-| Name | Type |
-| ------ | ------ |
-| key | `string` |
-| value | `any` |
+Name | Type |
+------ | ------ |
+`key` | string |
+`value` | any |
 
-**Returns:** `void`
-
-___
-
+**Returns:** *void*

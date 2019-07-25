@@ -1,4 +1,6 @@
-[@poppinss/config](../README.md) > [@poppinss/config](../modules/_poppinss_config.md)
+> **[@poppinss/config](../README.md)**
+
+[Globals](../README.md) / [@poppinss/config](_poppinss_config.md) /
 
 # External module: @poppinss/config
 
@@ -11,6 +13,3 @@
 ### Interfaces
 
 * [ConfigContract](../interfaces/_poppinss_config.configcontract.md)
-
----
-
