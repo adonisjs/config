@@ -1,6 +1,6 @@
 {
   "name": "@poppinss/config",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Config management for Adonis framework",
   "main": "build/index.js",
   "files": [
