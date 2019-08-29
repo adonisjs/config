@@ -1,9 +1,10 @@
-> **[@poppinss/config](README.md)**
+**[@poppinss/config](README.md)**
 
-[Globals](README.md) /
+[Globals](README.md)
 
 ## Index
 
 ### External modules
 
-* [@poppinss/config](modules/_poppinss_config.md)
+* ["Config"](modules/_config_.md)
+* ["contracts"](modules/_contracts_.md)

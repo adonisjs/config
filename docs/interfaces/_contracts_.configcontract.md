@@ -1,6 +1,6 @@
-> **[@poppinss/config](../README.md)**
+**[@poppinss/config](../README.md)**
 
-[Globals](../README.md) / [@poppinss/config](../modules/_poppinss_config.md) / [ConfigContract](_poppinss_config.configcontract.md) /
+[Globals](../README.md) › ["contracts"](../modules/_contracts_.md) › [ConfigContract](_contracts_.configcontract.md)
 
 # Interface: ConfigContract
 
@@ -10,16 +10,16 @@
 
 ## Implemented by
 
-* [Config](../classes/_poppinss_config.config.md)
+* [Config](../classes/_config_.config.md)
 
 ## Index
 
 ### Methods
 
-* [defaults](_poppinss_config.configcontract.md#defaults)
-* [get](_poppinss_config.configcontract.md#get)
-* [merge](_poppinss_config.configcontract.md#merge)
-* [set](_poppinss_config.configcontract.md#set)
+* [defaults](_contracts_.configcontract.md#defaults)
+* [get](_contracts_.configcontract.md#get)
+* [merge](_contracts_.configcontract.md#merge)
+* [set](_contracts_.configcontract.md#set)
 
 ## Methods
 
@@ -55,7 +55,7 @@ ___
 
 ###  merge
 
-▸ **merge**(`key`: string, `defaultValues`: object, `customizer?`: `Function`): *any*
+▸ **merge**(`key`: string, `defaultValues`: object, `customizer?`: Function): *any*
 
 **Parameters:**
 
@@ -63,7 +63,7 @@ Name | Type |
 ------ | ------ |
 `key` | string |
 `defaultValues` | object |
-`customizer?` | `Function` |
+`customizer?` | Function |
 
 **Returns:** *any*
 
