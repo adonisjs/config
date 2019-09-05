@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://res.cloudinary.com/adonisjs/image/upload/q_100/v1557762307/adonisjs_iftxlt.jpg" width="600px">
+  <img src="https://res.cloudinary.com/adonisjs/image/upload/q_100/v1564392111/adonis-banner_o9lunk.png" width="600px">
 </div>
 
 # Config
@@ -16,6 +16,7 @@ Extremely simple module to **decouple application config** from the file system,
 ## Table of contents
 
 - [Usage](#usage)
+- [Usage with AdonisJs](#usage-with-adonisjs)
 - [Why not simply create the config files?](#why-not-simply-create-the-config-files)
 - [Multiple config sources](#multiple-config-sources)
 - [Easy to fake during tests](#easy-to-fake-during-tests)
@@ -62,6 +63,29 @@ config.get('app.name') // adonis
 config.get('database.connection') // mysql
 config.get('database.user', 'root') // root
 ```
+
+## Usage with AdonisJs
+
+The `@adonisjs/core` includes this module and hence there is no need to install it seperately. However, here are the instructions to setup the provider.
+
+```ts
+export const providers = [
+  '@adonisjs/config/build/providers/ConfigProvider',
+]
+```
+
+After this, you have to register the typings file inside `files` array for Typescript to pick the ambient module.
+
+> All this hassle is required, since this module is never meant to be installed standalone.
+
+**tsconfig.json**
+
+```json
+{
+  "files": ["./node_modules/@adonisjs/config/build/adonis-typings/config.d.ts"]
+}
+```
+
 
 ## Why not simply create the config files?
 Majority of projects create config files next to the source files or inside a dedicated config directory and require those files wherever needed.
