@@ -1,9 +1,9 @@
 /**
- * @module @poppinss/config
+ * @module @adonisjs/config
  */
 
 /*
-* @poppinss/config
+* @adonisjs/config
 *
 * (c) Harminder Virk <virk@adonisjs.com>
 *
@@ -11,8 +11,10 @@
 * file that was distributed with this source code.
 */
 
+/// <reference path="../adonis-typings/config.ts" />
+
 import { get, set, mergeWith } from 'lodash'
-import { ConfigContract } from './contracts'
+import { ConfigContract } from '@ioc:Adonis/Core/Config'
 
 /**
  * Config module eases the process of using configuration inside your AdonisJs

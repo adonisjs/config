@@ -1,6 +1,6 @@
-**[@poppinss/config](../README.md)**
+**[@adonisjs/config](../README.md)**
 
-[Globals](../README.md) › ["Config"](../modules/_config_.md) › [Config](_config_.config.md)
+[Globals](../README.md) › ["src/Config"](../modules/_src_config_.md) › [Config](_src_config_.config.md)
 
 # Class: Config
 
@@ -35,26 +35,26 @@ The `get` method doesn't raise runtime exceptions when top level objects are mis
 
 ## Implements
 
-* [ConfigContract](../interfaces/_contracts_.configcontract.md)
+* ConfigContract
 
 ## Index
 
 ### Constructors
 
-* [constructor](_config_.config.md#constructor)
+* [constructor](_src_config_.config.md#constructor)
 
 ### Methods
 
-* [defaults](_config_.config.md#defaults)
-* [get](_config_.config.md#get)
-* [merge](_config_.config.md#merge)
-* [set](_config_.config.md#set)
+* [defaults](_src_config_.config.md#defaults)
+* [get](_src_config_.config.md#get)
+* [merge](_src_config_.config.md#merge)
+* [set](_src_config_.config.md#set)
 
 ## Constructors
 
 ###  constructor
 
-\+ **new Config**(`_config`: object): *[Config](_config_.config.md)*
+\+ **new Config**(`_config`: object): *[Config](_src_config_.config.md)*
 
 **Parameters:**
 
@@ -62,15 +62,13 @@ Name | Type | Default |
 ------ | ------ | ------ |
 `_config` | object |  {} |
 
-**Returns:** *[Config](_config_.config.md)*
+**Returns:** *[Config](_src_config_.config.md)*
 
 ## Methods
 
 ###  defaults
 
 ▸ **defaults**(`key`: string, `value`: any): *void*
-
-*Implementation of [ConfigContract](../interfaces/_contracts_.configcontract.md)*
 
 Defaults allows providers to define the default config for a
 module, which is merged with the user config
@@ -89,8 +87,6 @@ ___
 ###  get
 
 ▸ **get**(`key`: string, `defaultValue?`: any): *any*
-
-*Implementation of [ConfigContract](../interfaces/_contracts_.configcontract.md)*
 
 Read value from the pre-loaded config. Make use of the `dot notation`
 syntax to read nested values.
@@ -116,8 +112,6 @@ ___
 ###  merge
 
 ▸ **merge**(`key`: string, `defaultValues`: object, `customizer?`: Function): *any*
-
-*Implementation of [ConfigContract](../interfaces/_contracts_.configcontract.md)*
 
 Fetch and merge an object to the existing config. This method is useful
 when you are fetching an object from the config and want to merge
@@ -152,8 +146,6 @@ ___
 ###  set
 
 ▸ **set**(`key`: string, `value`: any): *void*
-
-*Implementation of [ConfigContract](../interfaces/_contracts_.configcontract.md)*
 
 Update in memory value of the pre-loaded config
 

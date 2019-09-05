@@ -1,9 +1,9 @@
 /**
- * @module @poppinss/config
+ * @module @adonisjs/config
  */
 
  /*
-* @poppinss/config
+* @adonisjs/config
 *
 * (c) Harminder Virk <virk@adonisjs.com>
 *
@@ -12,4 +12,3 @@
 */
 
 export { Config } from './src/Config'
-export { ConfigContract } from './src/contracts'

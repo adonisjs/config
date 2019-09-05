@@ -1,4 +1,4 @@
-**[@poppinss/config](README.md)**
+**[@adonisjs/config](README.md)**
 
 [Globals](README.md)
 
@@ -6,5 +6,7 @@
 
 ### External modules
 
-* ["Config"](modules/_config_.md)
-* ["contracts"](modules/_contracts_.md)
+* ["adonis-typings/config"](modules/_adonis_typings_config_.md)
+* ["providers/ConfigProvider"](modules/_providers_configprovider_.md)
+* ["src/Config"](modules/_src_config_.md)
+* ["standalone"](modules/_standalone_.md)

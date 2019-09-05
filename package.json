@@ -1,12 +1,13 @@
 {
-  "name": "@poppinss/config",
+  "name": "@adonisjs/config",
   "version": "1.0.7",
   "description": "Config management for Adonis framework",
-  "main": "build/index.js",
   "files": [
+    "build/adonis-typings",
+    "build/providers",
     "build/src",
-    "build/index.d.ts",
-    "build/index.js"
+    "build/standalone.d.ts",
+    "build/standalone.js"
   ],
   "scripts": {
     "mrm": "mrm --preset=@adonisjs/mrm-preset",
@@ -16,7 +17,7 @@
     "lint": "tslint --project tsconfig.json",
     "clean": "del build",
     "compile": "npm run lint && npm run clean && tsc",
-    "build": "npm run compile && typedoc --theme markdown --mdHideSources --excludePrivate && git add docs",
+    "build": "npm run compile && typedoc --theme markdown --hideSources --excludePrivate && git add docs",
     "commit": "git-cz",
     "release": "np"
   },
@@ -24,9 +25,10 @@
     "config",
     "adonisjs"
   ],
-  "author": "virk,poppinss",
+  "author": "virk,adonisjs",
   "license": "MIT",
   "devDependencies": {
+    "@adonisjs/fold": "^6.1.6",
     "@adonisjs/mrm-preset": "^2.1.0",
     "@types/lodash": "^4.14.138",
     "@types/node": "^12.7.4",
@@ -70,6 +72,7 @@
     "anyBranch": false
   },
   "dependencies": {
+    "@poppinss/utils": "^1.0.6",
     "lodash": "^4.17.15"
   },
   "directories": {
@@ -78,10 +81,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/poppinss/config.git"
+    "url": "git+https://github.com/adonisjs/config.git"
   },
   "bugs": {
-    "url": "https://github.com/poppinss/config/issues"
+    "url": "https://github.com/adonisjs/config/issues"
   },
-  "homepage": "https://github.com/poppinss/config#readme"
+  "homepage": "https://github.com/adonisjs/config#readme"
 }
