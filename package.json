@@ -72,7 +72,7 @@
     "anyBranch": false
   },
   "dependencies": {
-    "@poppinss/utils": "^1.0.6",
+    "@poppinss/utils": "^1.0.7",
     "lodash": "^4.17.15"
   },
   "directories": {
