@@ -1,6 +1,6 @@
 {
   "name": "@adonisjs/config",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "Config management for Adonis framework",
   "files": [
     "build/adonis-typings",

@@ -1,6 +1,6 @@
 **[@adonisjs/config](../README.md)**
 
-[Globals](../README.md) › ["providers/ConfigProvider"](../modules/_providers_configprovider_.md) › [ConfigProvider](_providers_configprovider_.configprovider.md)
+[Globals](../README.md) › [&quot;providers/ConfigProvider&quot;](../modules/_providers_configprovider_.md) › [ConfigProvider](_providers_configprovider_.configprovider.md)
 
 # Class: ConfigProvider
 

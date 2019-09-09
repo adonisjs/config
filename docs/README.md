@@ -2,6 +2,8 @@
 
 [Globals](README.md)
 
+# @adonisjs/config
+
 ## Index
 
 ### External modules
