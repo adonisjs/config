@@ -41,7 +41,7 @@ import { ConfigContract } from '@ioc:Adonis/Core/Config'
  * The `get` method doesn't raise runtime exceptions when top level objects are missing.
  */
 export class Config implements ConfigContract {
-  constructor (private _config = {}) {
+  constructor (private config = {}) {
   }
 
   /**
@@ -56,7 +56,7 @@ export class Config implements ConfigContract {
    * ```
    */
   public get (key: string, defaultValue?: any): any {
-    return get(this._config, key, defaultValue)
+    return get(this.config, key, defaultValue)
   }
 
   /**
@@ -104,6 +104,6 @@ export class Config implements ConfigContract {
    * ```
    */
   public set (key: string, value: any): void {
-    set(this._config, key, value)
+    set(this.config, key, value)
   }
 }
