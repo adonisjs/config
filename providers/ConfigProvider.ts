@@ -1,7 +1,3 @@
-/**
- * @module @adonisjs/config
- */
-
 /*
 * @adonisjs/config
 *
