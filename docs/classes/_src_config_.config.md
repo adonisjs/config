@@ -1,6 +1,4 @@
-**[@adonisjs/config](../README.md)**
-
-[Globals](../README.md) › [&quot;src/Config&quot;](../modules/_src_config_.md) › [Config](_src_config_.config.md)
+[@adonisjs/config](../README.md) › ["src/Config"](../modules/_src_config_.md) › [Config](_src_config_.config.md)
 
 # Class: Config
 
@@ -54,13 +52,13 @@ The `get` method doesn't raise runtime exceptions when top level objects are mis
 
 ###  constructor
 
-\+ **new Config**(`_config`: object): *[Config](_src_config_.config.md)*
+\+ **new Config**(`config`: object): *[Config](_src_config_.config.md)*
 
 **Parameters:**
 
 Name | Type | Default |
 ------ | ------ | ------ |
-`_config` | object |  {} |
+`config` | object |  {} |
 
 **Returns:** *[Config](_src_config_.config.md)*
 

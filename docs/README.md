@@ -1,6 +1,4 @@
-**[@adonisjs/config](README.md)**
-
-[Globals](README.md)
+[@adonisjs/config](README.md)
 
 # @adonisjs/config
 

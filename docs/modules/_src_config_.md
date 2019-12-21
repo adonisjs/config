@@ -1,6 +1,4 @@
-**[@adonisjs/config](../README.md)**
-
-[Globals](../README.md) › [&quot;src/Config&quot;](_src_config_.md)
+[@adonisjs/config](../README.md) › ["src/Config"](_src_config_.md)
 
 # External module: "src/Config"
 
