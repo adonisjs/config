@@ -9,6 +9,7 @@
 
 import { requireAll } from '@poppinss/utils'
 import { IocContract } from '@adonisjs/fold'
+
 import { Config } from '../src/Config'
 
 export default class ConfigProvider {

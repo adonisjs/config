@@ -9,7 +9,9 @@
 
 /// <reference path="../adonis-typings/config.ts" />
 
-import { get, set, mergeWith } from 'lodash'
+import get from 'lodash.get'
+import set from 'lodash.set'
+import mergeWith from 'lodash.mergewith'
 import { ConfigContract } from '@ioc:Adonis/Core/Config'
 
 /**
