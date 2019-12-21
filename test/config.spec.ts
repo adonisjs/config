@@ -1,5 +1,5 @@
 /*
-* @poppinss/config
+* @adonisjs/config
 *
 * (c) Harminder Virk <virk@adonisjs.com>
 *
@@ -41,9 +41,9 @@ test.group('Config', () => {
         return 'memory'
       }
     }), {
-        driver: 'memory',
-        filePath: 'foo',
-      })
+      driver: 'memory',
+      filePath: 'foo',
+    })
   })
 
   test('update in-memory config value', async (assert) => {

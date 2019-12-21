@@ -1,8 +1,4 @@
-/**
- * @module @adonisjs/config
- */
-
- /*
+/*
 * @adonisjs/config
 *
 * (c) Harminder Virk <virk@adonisjs.com>
