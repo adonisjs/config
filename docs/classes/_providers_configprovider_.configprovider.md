@@ -14,7 +14,7 @@
 
 ### Properties
 
-* [$container](_providers_configprovider_.configprovider.md#protected-$container)
+* [$container](_providers_configprovider_.configprovider.md#protected-container)
 
 ### Methods
 

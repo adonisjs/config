@@ -2,4 +2,14 @@
 
 # External module: "standalone"
 
+## Index
 
+### References
+
+* [Config](_standalone_.md#config)
+
+## References
+
+###  Config
+
+• **Config**:

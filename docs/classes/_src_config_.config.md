@@ -58,7 +58,7 @@ The `get` method doesn't raise runtime exceptions when top level objects are mis
 
 Name | Type | Default |
 ------ | ------ | ------ |
-`config` | object |  {} |
+`config` | object | {} |
 
 **Returns:** *[Config](_src_config_.config.md)*
 
