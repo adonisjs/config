@@ -9,9 +9,7 @@
 
 /// <reference path="../adonis-typings/config.ts" />
 
-import get from 'lodash.get'
-import set from 'lodash.set'
-import mergeWith from 'lodash.mergewith'
+import { lodash } from '@poppinss/utils'
 import { ConfigContract } from '@ioc:Adonis/Core/Config'
 
 /**
@@ -56,7 +54,7 @@ export class Config implements ConfigContract {
    * ```
    */
   public get (key: string, defaultValue?: any): any {
-    return get(this.config, key, defaultValue)
+    return lodash.get(this.config, key, defaultValue)
   }
 
   /**
@@ -79,7 +77,7 @@ export class Config implements ConfigContract {
    * ```
    */
   public merge (key: string, defaultValues: object, customizer?: Function): any {
-    return mergeWith(defaultValues, this.get(key), customizer)
+    return lodash.mergeWith(defaultValues, this.get(key), customizer)
   }
 
   /**
@@ -89,7 +87,7 @@ export class Config implements ConfigContract {
   public defaults (key: string, value: any): void {
     const existingValue = this.get(key)
     if (existingValue) {
-      mergeWith(value, existingValue)
+      lodash.mergeWith(value, existingValue)
     }
 
     this.set(key, value)
@@ -104,6 +102,6 @@ export class Config implements ConfigContract {
    * ```
    */
   public set (key: string, value: any): void {
-    set(this.config, key, value)
+    lodash.set(this.config, key, value)
   }
 }

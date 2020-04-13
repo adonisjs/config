@@ -73,10 +73,7 @@
     "anyBranch": false
   },
   "dependencies": {
-    "@poppinss/utils": "^2.2.4",
-    "lodash.get": "^4.4.2",
-    "lodash.mergewith": "^4.6.2",
-    "lodash.set": "^4.3.2"
+    "@poppinss/utils": "^2.2.4"
   },
   "directories": {
     "doc": "docs",
