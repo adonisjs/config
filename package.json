@@ -1,7 +1,7 @@
 {
   "name": "@adonisjs/config",
   "version": "1.0.12",
-  "description": "Config management for Adonis framework",
+  "description": "Config management for AdonisJS framework",
   "main": "build/providers/ConfigProvider.js",
   "files": [
     "build/adonis-typings",
@@ -31,7 +31,6 @@
   "devDependencies": {
     "@adonisjs/fold": "^6.3.5",
     "@adonisjs/mrm-preset": "^2.3.0",
-    "@types/lodash": "^4.14.149",
     "@types/node": "^13.11.1",
     "commitizen": "^4.0.4",
     "cz-conventional-changelog": "^3.1.0",
