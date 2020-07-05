@@ -60,7 +60,7 @@
 	},
 	"husky": {
 		"hooks": {
-			"pre-commit": "doctoc README.md --title='## Table of contents' && git add README.md && npm audit --production --json | ./node_modules/.bin/npm-audit-html",
+			"pre-commit": "doctoc README.md --title='## Table of contents' && git add README.md && npm audit --production --json | ./node_modules/.bin/npm-audit-html && git add npm-audit.html",
 			"commit-msg": "node ./node_modules/@adonisjs/mrm-preset/validateCommit/conventional/validate.js"
 		}
 	},
