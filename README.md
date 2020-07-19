@@ -1,172 +1,41 @@
 <div align="center">
-  <img src="https://res.cloudinary.com/adonisjs/image/upload/q_100/v1564392111/adonis-banner_o9lunk.png" width="600px">
+  <img src="https://res.cloudinary.com/adonisjs/image/upload/q_100/v1558612869/adonis-readme_zscycu.jpg" width="600px">
 </div>
 
-# Config
-[![circleci-image]][circleci-url] [![npm-image]][npm-url] ![][typescript-image] [![license-image]][license-url]
+<br />
 
-Extremely simple module to **decouple application config** from the file system, which has handful of benefits.
+<div align="center">
+  <h3>AdonisJS Config Provider</h3>
+  <p>Config provider to read AdonisJS application config values without directly relying on hard-coded paths</p>
+</div>
 
-1. Can rely on more sources to feed configuration.
-2. Easy to define fake values during testing.
-3. A much nicer API to read nested values.
+<br />
 
-<!-- START doctoc generated TOC please keep comment here to allow auto update -->
-<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-## Table of contents
+<div align="center">
 
-- [Usage](#usage)
-- [Usage with AdonisJs](#usage-with-adonisjs)
-- [Why not simply create the config files?](#why-not-simply-create-the-config-files)
-- [Multiple config sources](#multiple-config-sources)
-- [Easy to fake during tests](#easy-to-fake-during-tests)
-    - [Config file](#config-file)
-    - [Config module](#config-module)
-    - [Application code](#application-code)
-    - [Test code](#test-code)
-- [Reading nested values](#reading-nested-values)
-- [API](#api)
-- [Audit report](#audit-report)
+[![circleci-image]][circleci-url] [![npm-image]][npm-url] ![][typescript-image] [![license-image]][license-url] [![audit-report-image]][audit-report-url]
 
-<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+</div>
 
-## Usage
-Install the package from npm as follows
+<div align="center">
+  <h3>
+    <a href="https://preview.adonisjs.com">
+      Website
+    </a>
+    <span> | </span>
+    <a href="https://preview.adonisjs.com/guides/config">
+      Guides
+    </a>
+    <span> | </span>
+    <a href="CONTRIBUTING.md">
+      Contributing
+    </a>
+  </h3>
+</div>
 
-```sh
-npm i @adonisjs/config
-
-# yarn
-yarn add @adonisjs/config
-```
-
-and then use the class as follows:
-
-```ts
-import { Config } from '@adonisjs/config/build/standalone'
-
-const initialConfiguration = {
-  app: {
-    name: 'adonis',
-  },
-  database: {
-    connection: 'mysql',
-  },
-  logger: {
-    level: 'debug',
-  },
-}
-
-const config = new Config(initialConfiguration)
-
-config.get('app.name') // adonis
-config.get('database.connection') // mysql
-config.get('database.user', 'root') // root
-```
-
-## Usage with AdonisJs
-
-The `@adonisjs/core` includes this module and hence there is no need to install it seperately. However, here are the instructions to setup the provider.
-
-```ts
-export const providers = [
-  '@adonisjs/config',
-]
-```
-
-After this, you have to register the typings file inside `files` array for Typescript to pick the ambient module.
-
-> All this hassle is required, since this module is never meant to be installed standalone.
-
-**tsconfig.json**
-
-```json
-{
-  "files": ["./node_modules/@adonisjs/config/build/adonis-typings/config.d.ts"]
-}
-```
-
-
-## Why not simply create the config files?
-Majority of projects create config files next to the source files or inside a dedicated config directory and require those files wherever needed.
-
-However, with AdonisJs, we make the process of config management a little bit better over manually requiring config files and it has handful of benefits.
-
-AdonisJs recommends to save all configuration inside the `config` directory and then behind the scenes it read those files and feed it's content to the `Config` class and later the application developer can get rid of importing config files and rely on the `Config` class instance instead.
-
-## Multiple config sources
-We virtually decouple the config from the filesystem, which means your app can read the configuration from anywhere and pass it to the `Config` class. For example:
-
-```ts
-const { db } from 'some-db-module'
-import { Config } from '@adonisjs/config'
-
-const settings = await db.table('settings').select('*')
-
-const config = new Config({}) // start with empty store
-settings.forEach((row) => {
-  config.set(row.key, JSON.parse(row.value))
-})
-```
-
-## Easy to fake during tests
-Now since, you are not requiring the config files directly inside your application code, you can easily provide fake values during tests.
-
-#### Config file
-```ts
-export const db = {
-  connection: 'pg'
-}
-```
-
-#### Config module
-```ts
-import { Config } from '@adonisjs/config'
-import { db } from './config/database'
-
-export default new Config({ db })
-```
-
-#### Application code
-```ts
-import { Db } from 'some-db-module'
-import config from './config'
-
-const db = new Db(config.get('db'))
-
-class UserController {
-  async store () {
-    // perform insert
-  }
-}
-```
-
-#### Test code
-```ts
-import config from './config'
-config.set('db.connection', 'sqlite')
-
-// now run tests and connection will be sqlite over pg
-```
-
-## Reading nested values
-Reading nested values in Javascript isn't fun. You have to ensure that top level object is actually an object before accessing it's child.
-
-However, with this module, you can pull nested values without worrying about the intermediate parents being `undefined` or `null`.
-
-```ts
-config.get('database.mysql.connection.host', '127.0.0.1')
-```
-
-The `get` method will return `127.0.0.1` if any of the parents or the value of `host` itself is non-existent.
-
-## API
-Following are the autogenerated files via Typedoc
-
-* [API](docs/README.md)
-
-## Audit report
-[Click here](https://htmlpreview.github.io/?https://github.com/adonisjs/config/blob/develop/npm-audit.html) to see the latest npm audit report.
+<div align="center">
+  <sub>Built with ❤︎ by <a href="https://twitter.com/AmanVirk1">Harminder Virk</a>
+</div>
 
 [circleci-image]: https://img.shields.io/circleci/project/github/adonisjs/config/master.svg?style=for-the-badge&logo=circleci
 [circleci-url]: https://circleci.com/gh/adonisjs/config "circleci"
@@ -179,3 +48,6 @@ Following are the autogenerated files via Typedoc
 
 [license-image]: https://img.shields.io/npm/l/@adonisjs/config?color=blueviolet&style=for-the-badge
 [license-url]: LICENSE.md "license"
+
+[audit-report-image]: https://img.shields.io/badge/-Audit%20Report-blueviolet?style=for-the-badge
+[audit-report-url]: https://htmlpreview.github.io/?https://github.com/adonisjs/config/blob/develop/npm-audit.html "audit-report"
