@@ -28,6 +28,8 @@ test.group('ConfigProvider', () => {
 
 		assert.instanceOf(ioc.use('Adonis/Core/Config'), Config)
 		assert.deepEqual(ioc.use('Adonis/Core/Config'), ioc.use('Adonis/Core/Config'))
-		assert.deepEqual(ioc.use('Adonis/Core/Config').get('app'), { appName: 'AdonisJS' })
+		assert.deepEqual(ioc.use('Adonis/Core/Config').all(), {
+			app: { appName: 'AdonisJS' },
+		})
 	})
 })

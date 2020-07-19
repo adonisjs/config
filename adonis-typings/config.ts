@@ -28,6 +28,11 @@ declare module '@ioc:Adonis/Core/Config' {
 	 */
 	export interface ConfigContract {
 		/**
+		 * Returns complete config
+		 */
+		all(): any
+
+		/**
 		 * Get configuration from a config file and optionally access the object
 		 * properties using the `dot notation`.
 		 *

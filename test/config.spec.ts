@@ -37,7 +37,7 @@ test.group('Config', () => {
 		})
 
 		assert.deepEqual(
-			config.merge('app.logger', { filePath: 'foo' }, (_objValue, _srcValue, key) => {
+			config.merge('app.logger', { filePath: 'foo' }, (_, __, key) => {
 				if (key === 'driver') {
 					return 'memory'
 				}
@@ -87,5 +87,59 @@ test.group('Config', () => {
 		assert.deepEqual(config.get('app.logger'), {
 			filePath: join(__dirname),
 		})
+	})
+
+	test('get complete config', async (assert) => {
+		const config = new Config({
+			app: {
+				logger: {
+					driver: 'file',
+				},
+			},
+		})
+
+		assert.deepEqual(config.all(), {
+			app: {
+				logger: {
+					driver: 'file',
+				},
+			},
+		})
+	})
+
+	test('get value for a key', async (assert) => {
+		const config = new Config({
+			app: {
+				logger: {
+					driver: 'file',
+				},
+			},
+		})
+
+		assert.deepEqual(config.get('app.logger.driver'), 'file')
+	})
+
+	test('return undefined when key parent is missing', async (assert) => {
+		const config = new Config({
+			app: {
+				logger: {
+					driver: 'file',
+				},
+			},
+		})
+
+		assert.isUndefined(config.get('app.profiler.enabled'))
+	})
+
+	test('return default value when value is missing', async (assert) => {
+		const config = new Config({
+			app: {
+				logger: {
+					driver: 'file',
+				},
+			},
+		})
+
+		assert.deepEqual(config.get('app.profiler.enabled', true), true)
 	})
 })

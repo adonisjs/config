@@ -42,6 +42,13 @@ export class Config implements ConfigContract {
 	constructor(private config = {}) {}
 
 	/**
+	 * Returns complete config
+	 */
+	public all() {
+		return this.config
+	}
+
+	/**
 	 * Read value from the pre-loaded config. Make use of the `dot notation`
 	 * syntax to read nested values.
 	 *
