@@ -10,14 +10,14 @@
 import { requireAll } from '@poppinss/utils'
 import { IocContract } from '@adonisjs/fold'
 
-import { Config } from '../src/Config'
-
 export default class ConfigProvider {
 	constructor(protected container: IocContract) {}
 
 	public register() {
 		this.container.singleton('Adonis/Core/Config', () => {
 			const app = this.container.use('Adonis/Core/Application')
+
+			const { Config } = require('../src/Config')
 			return new Config(requireAll(app.configPath()))
 		})
 	}
