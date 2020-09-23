@@ -87,5 +87,9 @@
 	"bugs": {
 		"url": "https://github.com/adonisjs/config/issues"
 	},
-	"homepage": "https://github.com/adonisjs/config#readme"
+	"homepage": "https://github.com/adonisjs/config#readme",
+	"publishConfig": {
+		"access": "public",
+		"tag": "next"
+	}
 }
