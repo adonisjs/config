@@ -90,6 +90,6 @@
 	"homepage": "https://github.com/adonisjs/config#readme",
 	"publishConfig": {
 		"access": "public",
-		"tag": "next"
+		"tag": "latest"
 	}
 }
