@@ -82,7 +82,7 @@ export class Config implements ConfigContract {
 	 * })
 	 * ```
 	 */
-	public merge(key: string, defaultValues: object, customizer?: Function): any {
+	public merge(key: string, defaultValues: object, customizer?: (...args: any[]) => any): any {
 		return lodash.mergeWith(defaultValues, this.get(key), customizer)
 	}
 
