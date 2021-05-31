@@ -1,3 +1,24 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+## Table of contents
+
+- [AdonisJS Config Provider](#adonisjs-config-provider)
+- [
+    
+      Website
+    
+     | 
+    
+      Guides
+    
+     | 
+    
+      Contributing
+    
+  ](#website%0A----%0A------%0A----%0A------guides%0A----%0A------%0A----%0A------contributing)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 <div align="center">
   <img src="https://res.cloudinary.com/adonisjs/image/upload/q_100/v1558612869/adonis-readme_zscycu.jpg" width="600px">
 </div>
@@ -13,7 +34,7 @@
 
 <div align="center">
 
-[![circleci-image]][circleci-url] [![npm-image]][npm-url] ![][typescript-image] [![license-image]][license-url] [![synk-image]][synk-url]
+[![gh-workflow-image]][gh-workflow-url] [![npm-image]][npm-url] ![][typescript-image] [![license-image]][license-url] [![synk-image]][synk-url]
 
 </div>
 
@@ -37,8 +58,8 @@
   <sub>Built with ❤︎ by <a href="https://twitter.com/AmanVirk1">Harminder Virk</a>
 </div>
 
-[circleci-image]: https://img.shields.io/circleci/project/github/adonisjs/config/master.svg?style=for-the-badge&logo=circleci
-[circleci-url]: https://circleci.com/gh/adonisjs/config "circleci"
+[gh-workflow-image]: https://img.shields.io/github/workflow/status/adonisjs/config/test?style=for-the-badge
+[gh-workflow-url]: https://github.com/adonisjs/config/actions/workflows/test.yml "Github action"
 
 [typescript-image]: https://img.shields.io/badge/Typescript-294E80.svg?style=for-the-badge&logo=typescript
 [typescript-url]:  "typescript"
