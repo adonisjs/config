@@ -1,6 +1,6 @@
 {
 	"name": "@adonisjs/config",
-	"version": "3.0.4",
+	"version": "3.0.5",
 	"description": "Config management for AdonisJS framework",
 	"main": "build/index.js",
 	"files": [
