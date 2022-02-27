@@ -7,12 +7,12 @@
  * file that was distributed with this source code.
  */
 
-import test from 'japa'
+import { test } from '@japa/runner'
 import { join } from 'path'
 import { Config } from '../src/Config'
 
 test.group('Config', () => {
-  test('merge config with given defaults', async (assert) => {
+  test('merge config with given defaults', async ({ assert }) => {
     const config = new Config({
       app: {
         logger: {
@@ -27,7 +27,7 @@ test.group('Config', () => {
     })
   })
 
-  test('define merge config customizer', async (assert) => {
+  test('define merge config customizer', async ({ assert }) => {
     const config = new Config({
       app: {
         logger: {
@@ -49,7 +49,7 @@ test.group('Config', () => {
     )
   })
 
-  test('update in-memory config value', async (assert) => {
+  test('update in-memory config value', async ({ assert }) => {
     const config = new Config({
       app: {
         logger: {
@@ -61,7 +61,7 @@ test.group('Config', () => {
     assert.deepEqual(config.get('app.logger'), { driver: 'memory' })
   })
 
-  test('merge defaults with existing user defaults', async (assert) => {
+  test('merge defaults with existing user defaults', async ({ assert }) => {
     const config = new Config({
       app: {
         logger: {
@@ -77,7 +77,7 @@ test.group('Config', () => {
     })
   })
 
-  test('merge defaults with existing user defaults when they are missing', async (assert) => {
+  test('merge defaults with existing user defaults when they are missing', async ({ assert }) => {
     const config = new Config({
       app: {},
     })
@@ -89,7 +89,7 @@ test.group('Config', () => {
     })
   })
 
-  test('get complete config', async (assert) => {
+  test('get complete config', async ({ assert }) => {
     const config = new Config({
       app: {
         logger: {
@@ -107,7 +107,7 @@ test.group('Config', () => {
     })
   })
 
-  test('get value for a key', async (assert) => {
+  test('get value for a key', async ({ assert }) => {
     const config = new Config({
       app: {
         logger: {
@@ -119,7 +119,7 @@ test.group('Config', () => {
     assert.deepEqual(config.get('app.logger.driver'), 'file')
   })
 
-  test('return undefined when key parent is missing', async (assert) => {
+  test('return undefined when key parent is missing', async ({ assert }) => {
     const config = new Config({
       app: {
         logger: {
@@ -131,7 +131,7 @@ test.group('Config', () => {
     assert.isUndefined(config.get('app.profiler.enabled'))
   })
 
-  test('return default value when value is missing', async (assert) => {
+  test('return default value when value is missing', async ({ assert }) => {
     const config = new Config({
       app: {
         logger: {
