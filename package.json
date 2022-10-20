@@ -1,6 +1,6 @@
 {
 	"name": "@adonisjs/config",
-	"version": "3.0.9",
+	"version": "4.0.0-0",
 	"description": "Config management for AdonisJS framework",
 	"main": "build/index.js",
 	"type": "module",
@@ -99,14 +99,14 @@
 			"@commitlint/config-conventional"
 		]
 	},
-  "publishConfig": {
-    "access": "public",
-    "tag": "next"
-  },
-  "np": {
-    "message": "chore(release): %s",
-    "tag": "next",
-    "branch": "main",
-    "anyBranch": false
-  }
+	"publishConfig": {
+		"access": "public",
+		"tag": "next"
+	},
+	"np": {
+		"message": "chore(release): %s",
+		"tag": "next",
+		"branch": "main",
+		"anyBranch": false
+	}
 }
