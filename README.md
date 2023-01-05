@@ -25,7 +25,7 @@ In order to ensure that the AdonisJS community is welcoming to all, please revie
 ## License
 AdonisJS config is open-sourced software licensed under the [MIT license](LICENSE.md).
 
-[gh-workflow-image]: https://img.shields.io/github/workflow/status/adonisjs/config/test?style=for-the-badge
+[gh-workflow-image]: https://img.shields.io/github/actions/workflow/status/adonisjs/config/test.yml?style=for-the-badge
 [gh-workflow-url]: https://github.com/adonisjs/config/actions/workflows/test.yml "Github action"
 
 [typescript-image]: https://img.shields.io/badge/Typescript-294E80.svg?style=for-the-badge&logo=typescript
