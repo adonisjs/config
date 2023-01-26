@@ -28,6 +28,9 @@ export class ConfigLoader {
     this.#appRoot = appRoot
   }
 
+  /**
+   * Load config files as a tree from a given path.
+   */
   load() {
     return fsImportAll(this.#appRoot, {
       ignoreMissingRoot: true,

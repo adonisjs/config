@@ -10,7 +10,7 @@
 import lodash from '@poppinss/utils/lodash'
 
 /**
- * Config module eases the process of using configuration inside your AdonisJs
+ * Config module eases the process of using configuration inside your AdonisJS
  * applications.
  *
  * The config files are stored inside a dedicated directory, which are loaded and cached
@@ -18,7 +18,7 @@ import lodash from '@poppinss/utils/lodash'
  *
  * ## Access values
  *
- * 1. **Given the config file is stored as `config/app.js` with following content**
+ * 1. **Given the config file is stored as `config/app.ts` with following content**
  *
  * ```js
  * module.exports = {
@@ -29,11 +29,9 @@ import lodash from '@poppinss/utils/lodash'
  * 2. **You access the appKey as follows**
  *
  * ```js
- * Config.get('app.appKey')
+ * const config = new Config(configTree)
+ * config.get('app.appKey')
  * ```
- *
- * **NOTE:**
- * The `get` method doesn't raise runtime exceptions when top level objects are missing.
  */
 export class Config {
   #config: Record<any, any>
@@ -43,7 +41,7 @@ export class Config {
   }
 
   /**
-   * Get all the config files as a tree of key-value pair
+   * Get a tree of config imported from the config directory
    */
   all() {
     return this.#config
@@ -51,6 +49,10 @@ export class Config {
 
   /**
    * Check if config value exists for a given key
+   *
+   * ```ts
+   * config.has('database.mysql')
+   * ```
    */
   has(key: string): boolean {
     return lodash.has(this.#config, key)
@@ -60,19 +62,20 @@ export class Config {
    * Read value from the config. Make use of the `dot notation`
    * syntax to read nested values.
    *
-   * The `defaultValue` is returned when original value is `undefined`.
+   * The `defaultValue` is returned when the original value
+   * is `undefined`.
    *
    * ```ts
-   * Config.get('database.mysql')
+   * config.get('database.mysql')
    * ```
    */
-  get<T extends any>(key: string, defaultValue?: any): T {
+  get<T>(key: string, defaultValue?: any): T {
     return lodash.get(this.#config, key, defaultValue)
   }
 
   /**
-   * Define the defaults for the a given key. If the value for the given
-   * key exists, then it will be merged with the defaults.
+   * Define defaults for a config key. The defaults are merged
+   * with the value of the config key.
    */
   defaults(key: string, value: any): void {
     const existingValue = this.get(key)
@@ -84,10 +87,10 @@ export class Config {
   }
 
   /**
-   * Update in memory value of the pre-loaded config
+   * Update value for a key. No changes are made on the disk
    *
    * ```ts
-   * Config.set('database.host', '127.0.0.1')
+   * config.set('database.host', '127.0.0.1')
    * ```
    */
   set(key: string, value: any): void {
