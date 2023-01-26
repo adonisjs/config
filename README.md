@@ -2,11 +2,7 @@
 
 <br />
 
-<div align="center">
-
 [![gh-workflow-image]][gh-workflow-url] [![npm-image]][npm-url] ![][typescript-image] [![license-image]][license-url] [![synk-image]][synk-url]
-
-</div>
 
 ## Introduction
 Config provider to read AdonisJS application config values without directly relying on hard-coded paths.
