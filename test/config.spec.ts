@@ -87,6 +87,19 @@ test.group('Config', () => {
     assert.deepEqual(config.get('app.logger.driver'), 'file')
   })
 
+  test('check if key value exists', async ({ assert }) => {
+    const config = new Config({
+      foo: true,
+      bar: false,
+      baz: null,
+    })
+
+    assert.isTrue(config.has('foo'))
+    assert.isTrue(config.has('bar'))
+    assert.isTrue(config.has('baz'))
+    assert.isFalse(config.has('barBaz'))
+  })
+
   test('return undefined when key parent is missing', async ({ assert }) => {
     const config = new Config({
       app: {

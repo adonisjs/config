@@ -50,6 +50,13 @@ export class Config {
   }
 
   /**
+   * Check if config value exists for a given key
+   */
+  has(key: string): boolean {
+    return lodash.has(this.#config, key)
+  }
+
+  /**
    * Read value from the config. Make use of the `dot notation`
    * syntax to read nested values.
    *
