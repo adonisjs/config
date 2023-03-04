@@ -1,6 +1,6 @@
 {
 	"name": "@adonisjs/config",
-	"version": "4.2.0-0",
+	"version": "4.2.1-0",
 	"description": "Config management for AdonisJS framework",
 	"main": "build/index.js",
 	"type": "module",
