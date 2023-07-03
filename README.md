@@ -21,8 +21,8 @@ In order to ensure that the AdonisJS community is welcoming to all, please revie
 ## License
 AdonisJS config is open-sourced software licensed under the [MIT license](LICENSE.md).
 
-[gh-workflow-image]: https://img.shields.io/github/actions/workflow/status/adonisjs/config/test.yml?style=for-the-badge
-[gh-workflow-url]: https://github.com/adonisjs/config/actions/workflows/test.yml "Github action"
+[gh-workflow-image]: https://img.shields.io/github/actions/workflow/status/adonisjs/config/checks.yml?style=for-the-badge
+[gh-workflow-url]: https://github.com/adonisjs/config/actions/workflows/checks.yml "Github action"
 
 [typescript-image]: https://img.shields.io/badge/Typescript-294E80.svg?style=for-the-badge&logo=typescript
 [typescript-url]:  "typescript"
@@ -32,6 +32,3 @@ AdonisJS config is open-sourced software licensed under the [MIT license](LICENS
 
 [license-image]: https://img.shields.io/npm/l/@adonisjs/config?color=blueviolet&style=for-the-badge
 [license-url]: LICENSE.md "license"
-
-[synk-image]: https://img.shields.io/snyk/vulnerabilities/github/adonisjs/config?label=Synk%20Vulnerabilities&style=for-the-badge
-[synk-url]: https://snyk.io/test/github/adonisjs/config?targetFile=package.json "synk"
