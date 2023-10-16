@@ -1,6 +1,6 @@
 {
 	"name": "@adonisjs/config",
-	"version": "4.2.1-4",
+	"version": "4.2.1-5",
 	"description": "Config management for AdonisJS framework",
 	"main": "build/index.js",
 	"type": "module",
@@ -95,14 +95,14 @@
 		"extends": "@adonisjs/eslint-config/package"
 	},
 	"prettier": "@adonisjs/prettier-config",
-  "tsup": {
-    "entry": [
-      "./index.ts"
-    ],
-    "outDir": "./build",
-    "clean": true,
-    "format": "esm",
-    "dts": true,
-    "target": "esnext"
-  }
+	"tsup": {
+		"entry": [
+			"./index.ts"
+		],
+		"outDir": "./build",
+		"clean": true,
+		"format": "esm",
+		"dts": true,
+		"target": "esnext"
+	}
 }
