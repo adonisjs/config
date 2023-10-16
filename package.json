@@ -5,9 +5,7 @@
 	"main": "build/index.js",
 	"type": "module",
 	"files": [
-		"build/src",
-		"build/index.d.ts",
-		"build/index.js"
+		"build"
 	],
 	"exports": {
 		".": "./build/index.js"
@@ -21,7 +19,7 @@
 		"version": "npm run build",
 		"clean": "del-cli build",
 		"typecheck": "tsc --noEmit",
-		"compile": "npm run lint && npm run clean && tsc",
+		"compile": "npm run lint && npm run clean && tsup-node",
 		"build": "npm run compile",
 		"release": "np",
 		"format": "prettier --write .",
@@ -55,6 +53,7 @@
 		"np": "^8.0.4",
 		"prettier": "^3.0.3",
 		"ts-node": "^10.9.1",
+		"tsup": "^7.2.0",
 		"typescript": "^5.2.2"
 	},
 	"dependencies": {
@@ -95,5 +94,15 @@
 	"eslintConfig": {
 		"extends": "@adonisjs/eslint-config/package"
 	},
-	"prettier": "@adonisjs/prettier-config"
+	"prettier": "@adonisjs/prettier-config",
+  "tsup": {
+    "entry": [
+      "./index.ts"
+    ],
+    "outDir": "./build",
+    "clean": true,
+    "format": "esm",
+    "dts": true,
+    "target": "esnext"
+  }
 }
