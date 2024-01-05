@@ -1,54 +1,20 @@
 /*
  * @adonisjs/config
  *
- * (c) Harminder Virk <virk@adonisjs.com>
+ * (c) AdonisJS
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
 
 import { test } from '@japa/runner'
-import { join } from 'path'
-import { Config } from '../src/Config'
+import { getDirname } from '@poppinss/utils'
+
+import { Config } from '../src/config.js'
+
+const dirname = getDirname(import.meta.url)
 
 test.group('Config', () => {
-  test('merge config with given defaults', async ({ assert }) => {
-    const config = new Config({
-      app: {
-        logger: {
-          driver: 'file',
-        },
-      },
-    })
-
-    assert.deepEqual(config.merge('app.logger', { filePath: 'foo' }), {
-      driver: 'file',
-      filePath: 'foo',
-    })
-  })
-
-  test('define merge config customizer', async ({ assert }) => {
-    const config = new Config({
-      app: {
-        logger: {
-          driver: 'file',
-        },
-      },
-    })
-
-    assert.deepEqual(
-      config.merge('app.logger', { filePath: 'foo' }, (_, __, key) => {
-        if (key === 'driver') {
-          return 'memory'
-        }
-      }),
-      {
-        driver: 'memory',
-        filePath: 'foo',
-      }
-    )
-  })
-
   test('update in-memory config value', async ({ assert }) => {
     const config = new Config({
       app: {
@@ -57,6 +23,7 @@ test.group('Config', () => {
         },
       },
     })
+
     config.set('app.logger', { driver: 'memory' })
     assert.deepEqual(config.get('app.logger'), { driver: 'memory' })
   })
@@ -69,10 +36,11 @@ test.group('Config', () => {
         },
       },
     })
-    config.defaults('app.logger', { filePath: join(__dirname), driver: 'console' })
+
+    config.defaults('app.logger', { filePath: dirname, driver: 'console' })
 
     assert.deepEqual(config.get('app.logger'), {
-      filePath: join(__dirname),
+      filePath: dirname,
       driver: 'file',
     })
   })
@@ -82,10 +50,10 @@ test.group('Config', () => {
       app: {},
     })
 
-    config.defaults('app.logger', { filePath: join(__dirname) })
+    config.defaults('app.logger', { filePath: dirname })
 
     assert.deepEqual(config.get('app.logger'), {
-      filePath: join(__dirname),
+      filePath: dirname,
     })
   })
 
@@ -117,6 +85,19 @@ test.group('Config', () => {
     })
 
     assert.deepEqual(config.get('app.logger.driver'), 'file')
+  })
+
+  test('check if key value exists', async ({ assert }) => {
+    const config = new Config({
+      foo: true,
+      bar: false,
+      baz: null,
+    })
+
+    assert.isTrue(config.has('foo'))
+    assert.isTrue(config.has('bar'))
+    assert.isTrue(config.has('baz'))
+    assert.isFalse(config.has('barBaz'))
   })
 
   test('return undefined when key parent is missing', async ({ assert }) => {
