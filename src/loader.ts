@@ -22,17 +22,17 @@ import { fsImportAll } from '@poppinss/utils'
  * - .mjs
  */
 export class ConfigLoader {
-  #appRoot: string | URL
+  #configDir: string | URL
 
-  constructor(appRoot: string | URL) {
-    this.#appRoot = appRoot
+  constructor(configDir: string | URL) {
+    this.#configDir = configDir
   }
 
   /**
    * Load config files as a tree from a given path.
    */
   load() {
-    return fsImportAll(this.#appRoot, {
+    return fsImportAll(this.#configDir, {
       ignoreMissingRoot: true,
     })
   }
