@@ -1,6 +1,6 @@
 {
 	"name": "@adonisjs/config",
-	"version": "5.0.2",
+	"version": "5.0.3",
 	"description": "Config collection and loader used by the AdonisJS framework",
 	"main": "build/index.js",
 	"type": "module",
@@ -59,7 +59,11 @@
 	"bugs": {
 		"url": "https://github.com/adonisjs/config/issues"
 	},
-	"keywords": ["adonisjs", "adonisjs-core", "config"],
+	"keywords": [
+		"adonisjs",
+		"adonisjs-core",
+		"config"
+	],
 	"author": "Harminder Virk <virk@adonisjs.com>",
 	"license": "MIT",
 	"publishConfig": {
