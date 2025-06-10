@@ -7,7 +7,7 @@
  * file that was distributed with this source code.
  */
 
-import { fsImportAll } from '@poppinss/utils'
+import { fsImportAll } from '@poppinss/utils/fs'
 
 /**
  * The config loader imports all the script files from a given directory

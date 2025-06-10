@@ -8,11 +8,7 @@
  */
 
 import { test } from '@japa/runner'
-import { getDirname } from '@poppinss/utils'
-
 import { Config } from '../src/config.js'
-
-const dirname = getDirname(import.meta.url)
 
 test.group('Config', () => {
   test('update in-memory config value', async ({ assert }) => {
@@ -37,10 +33,10 @@ test.group('Config', () => {
       },
     })
 
-    config.defaults('app.logger', { filePath: dirname, driver: 'console' })
+    config.defaults('app.logger', { filePath: import.meta.dirname, driver: 'console' })
 
     assert.deepEqual(config.get('app.logger'), {
-      filePath: dirname,
+      filePath: import.meta.dirname,
       driver: 'file',
     })
   })
@@ -50,10 +46,10 @@ test.group('Config', () => {
       app: {},
     })
 
-    config.defaults('app.logger', { filePath: dirname })
+    config.defaults('app.logger', { filePath: import.meta.dirname })
 
     assert.deepEqual(config.get('app.logger'), {
-      filePath: dirname,
+      filePath: import.meta.dirname,
     })
   })
 
