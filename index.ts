@@ -7,5 +7,5 @@
  * file that was distributed with this source code.
  */
 
-export { Config } from './src/config.js'
-export { ConfigLoader } from './src/loader.js'
+export { Config } from './src/config.ts'
+export { ConfigLoader } from './src/loader.ts'
